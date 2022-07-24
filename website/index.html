@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-size: 16px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: #333;
+        border: none;
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+      .clearfix {
+        clear: both;
+      }
+      /* header开始 */
+      .header .top-box {
+        background: #f2f2f2;
+      }
+      .header .top-box .top {
+        width: 1200px;
+        margin: auto;
+        height: 30px;
+        padding-top: 8px;
+      }
+      .header .top-box .top div {
+        line-height: 14px;
+        font-size: 14px;
+      }
+      .header .top-box .top ul li {
+        float: left;
+        margin-left: 20px;
+        line-height: 14px;
+        padding-right: 15px;
+        border-right: 1px solid #ccc;
+        font-size: 14px;
+      }
+      .header .top-box .top ul li:nth-child(3) {
+        border: none;
+      }
+      .header .nav-box {
+        width: 1200px;
+        margin: 20px auto;
+      }
+      .header .nav-box .logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid #ccc;
+      }
+      .header .nav-box .logo img {
+        width: 100%;
+      }
+      .header .nav-box .title {
+        margin-left: 15px;
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 20px;
+      }
+      .header .nav-box .nav {
+        margin-top: 16px;
+      }
+      .header .nav-box .nav li {
+        float: left;
+        margin-left: 20px;
+      }
+      .header .nav-box .nav li a {
+        display: block;
+        line-height: 20px;
+        padding: 5px 15px;
+        height: 20px;
+      }
+      .header .nav-box .nav li:hover {
+        background: #4e6dec;
+      }
+      .header .nav-box .nav li:hover a {
+        color: #fff;
+      }
+      /* header结束 */
+      /* banner开始 */
+      .banner {
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        position: relative;
+      }
+      .banner img {
+        width: 100%;
+      }
+      .banner .title {
+        position: absolute;
+        right: 20%;
+        top: 30%;
+      }
+      .banner .title h2 {
+        font-size: 40px;
+        line-height: 40px;
+      }
+      .banner .title p {
+        font-size: 18px;
+        line-height: 36px;
+        margin-top: 30px;
+      }
+      .banner .title a {
+        display: block;
+        width: 120px;
+        height: 40px;
+        text-align: center;
+        margin-top: 50px;
+        margin-right: 20px;
+        border-radius: 50px;
+        line-height: 40px;
+        background: none;
+        float: left;
+      }
+      .banner .title .btn1 {
+        background: #4e6dec;
+        color: #fff;
+      }
+      .banner .title .btn2 {
+        border: 1px solid #4e6dec;
+        color: #4e6dec;
+      }
+      .banner .title a:hover {
+        background: #4e6dec;
+        color: #fff;
+      }
+      /* banner结束 */
+      /* content开始 */
+      .subject {
+        width: 1200px;
+        margin: 80px auto;
+        text-align: center;
+      }
+      .subject .title h3 {
+        font-size: 36px;
+        line-height: 36px;
+      }
+      .subject .title p {
+        line-height: 16px;
+        margin-top: 15px;
+      }
+      .subject ul {
+        margin-top: 40px;
+      }
+      .subject ul li {
+        width: 33.33333%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 20px;
+        margin-bottom: 20px;
+      }
+      .subject ul li img {
+        width: 100%;
+      }
+      .subject ul li p {
+        float: left;
+        line-height: 50px;
+        text-align: left;
+      }
+      .subject ul li a.btn {
+        float: right;
+        padding: 0px 15px;
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 12px;
+        border-radius: 50px;
+        background: #f0f3ff;
+        color: #4e6dec;
+      }
+      .subject ul li:hover a.btn {
+        background: #4e6dec;
+        color: #fff;
+      }
+      /* content结束 */
+      /* footer开始 */
+      .footer {
+        background: #2a2a2a;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 40px;
+      }
+      .footer .subject {
+        margin: 0 auto;
+      }
+      .footer .title h3 {
+        color: #fff;
+      }
+      .footer ul li {
+        width: 33.3333%;
+      }
+      .footer ul li div {
+        width: 160px;
+        margin: auto;
+        margin-top: 20px;
+        padding: 10px;
+        background: #fff;
+      }
+      .footer ul li div img {
+        width: 100%;
+      }
+      .footer ul li div p {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+      }
+      /* footer结束 */
+    </style>
+  </head>
+  <body>
+    <!-- header开始 -->
+    <div class="header">
+      <!-- top开始 -->
+      <div class="top-box">
+        <div class="top">
+          <div class="left">欢迎来到我的网站！</div>
+          <ul class="right">
+            <li>收藏网站</li>
+            <li>登录</li>
+            <li>反馈</li>
+            <div class="clearfix"></div>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- top结束 -->
+      <!-- nav开始 -->
+      <div class="nav-box">
+        <h1 class="logo-box left">
+          <div class="logo left">
+            <img
+              src="https://c-ssl.duitang.com/uploads/item/201901/19/20190119105005_uJPTs.jpeg"
+              alt="logo"
+            />
+          </div>
+          <div class="title left">西西的素材库</div>
+          <div class="clearfix"></div>
+        </h1>
+        <ul class="nav right">
+          <li><a href="/index.html">我的网站</a></li>
+          <li><a href="/">UI设计</a></li>
+          <li><a href="/">AE动效</a></li>
+          <li><a href="/">软件资源</a></li>
+          <li><a href="/">学习笔记</a></li>
+          <li><a href="/">关于我</a></li>
+          <div class="clearfix"></div>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <!-- nav结束 -->
+    </div>
+    <!-- header结束 -->
+    <!-- banner开始 -->
+    <div class="banner">
+      <div class="title">
+        <h2>Hi，欢迎来到这里</h2>
+        <p>
+          很高兴认识你，这是我的第一个网站，这里收藏了各种素材和文章<br />如果觉得有用，就点个收藏吧！
+        </p>
+        <a href="/" class="btn1">收藏一下</a>
+        <a href="/" class="btn2">联系西西</a>
+      </div>
+      <img
+        src="https://www.pptdiy.com/upload/new/%E9%94%AE%E7%9B%98%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%A1%8C%E9%9D%A2PPT%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87-2.jpg"
+        alt="banner"
+      />
+    </div>
+    <!-- banner结束 -->
+    <!-- content开始 -->
+    <div class="content">
+      <!-- UI设计开始 -->
+      <div class="UI subject">
+        <div class="title">
+          <h3>UI设计</h3>
+          <p>
+            设计素材分享&nbsp;&nbsp;·&nbsp;&nbsp;设计资源下载&nbsp;&nbsp;·&nbsp;&nbsp;免费交流平台
+          </p>
+        </div>
+        <ul>
+          <li>
+            <a href="">
+              <img
+                src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F1bc80ac0a4b6f1da735b059cdb34f52a7c0a9f8d1ccba-L2MWZV_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661194701&t=79a1aeedffc7ad9da4aacc7792df789e"
+                alt=""
+              />
+              <p>标题标题标题</p>
+              <a class="btn" href="/">查看详情</a>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F1bc80ac0a4b6f1da735b059cdb34f52a7c0a9f8d1ccba-L2MWZV_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661194701&t=79a1aeedffc7ad9da4aacc7792df789e"
+                alt=""
+              />
+              <p>标题标题标题</p>
+              <a class="btn" href="/">查看详情</a>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F1bc80ac0a4b6f1da735b059cdb34f52a7c0a9f8d1ccba-L2MWZV_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661194701&t=79a1aeedffc7ad9da4aacc7792df789e"
+                alt=""
+              />
+              <p>标题标题标题</p>
+              <a class="btn" href="/">查看详情</a>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F1bc80ac0a4b6f1da735b059cdb34f52a7c0a9f8d1ccba-L2MWZV_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661194701&t=79a1aeedffc7ad9da4aacc7792df789e"
+                alt=""
+              />
+              <p>标题标题标题</p>
+              <a class="btn" href="/">查看详情</a>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F1bc80ac0a4b6f1da735b059cdb34f52a7c0a9f8d1ccba-L2MWZV_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661194701&t=79a1aeedffc7ad9da4aacc7792df789e"
+                alt=""
+              />
+              <p>标题标题标题</p>
+              <a class="btn" href="/">查看详情</a>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F1bc80ac0a4b6f1da735b059cdb34f52a7c0a9f8d1ccba-L2MWZV_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661194701&t=79a1aeedffc7ad9da4aacc7792df789e"
+                alt=""
+              />
+              <p>标题标题标题</p>
+              <a class="btn" href="/">查看详情</a>
+            </a>
+          </li>
+          <div class="clearfix"></div>
+        </ul>
+      </div>
+      <!-- UI设计结束 -->
+      <!-- AE动效开始 -->
+      <div class="AE subject">
+        <div class="title">
+          <h3>AE动效</h3>
+          <p>
+            设计素材分享&nbsp;&nbsp;·&nbsp;&nbsp;设计资源下载&nbsp;&nbsp;·&nbsp;&nbsp;免费交流平台
+          </p>
+        </div>
+        <ul>
+          <li>
+            <a href="">
+              <img
+                src="https://img.zcool.cn/community/014ae35cb5512da8012141686f38f7.gif"
+                alt=""
+              />
+              <p>标题标题标题</p>
+              <a class="btn" href="/">查看详情</a>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="https://img.zcool.cn/community/014ae35cb5512da8012141686f38f7.gif"
+                alt=""
+              />
+              <p>标题标题标题</p>
+              <a class="btn" href="/">查看详情</a>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="https://img.zcool.cn/community/014ae35cb5512da8012141686f38f7.gif"
+                alt=""
+              />
+              <p>标题标题标题</p>
+              <a class="btn" href="/">查看详情</a>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="https://img.zcool.cn/community/014ae35cb5512da8012141686f38f7.gif"
+                alt=""
+              />
+              <p>标题标题标题</p>
+              <a class="btn" href="/">查看详情</a>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="https://img.zcool.cn/community/014ae35cb5512da8012141686f38f7.gif"
+                alt=""
+              />
+              <p>标题标题标题</p>
+              <a class="btn" href="/">查看详情</a>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="https://img.zcool.cn/community/014ae35cb5512da8012141686f38f7.gif"
+                alt=""
+              />
+              <p>标题标题标题</p>
+              <a class="btn" href="/">查看详情</a>
+            </a>
+          </li>
+          <div class="clearfix"></div>
+        </ul>
+      </div>
+      <!-- AE动效结束 -->
+    </div>
+    <!-- content结束 -->
+    <!-- footer开始 -->
+    <div class="footer">
+      <div class="subject">
+        <div class="title"><h3>结尾这里不知道放什么了，慢慢完善吧</h3></div>
+        <ul>
+          <li>
+            <div>
+              <img src="./images/wx.png" alt="" />
+              <p>关注我</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="./images/wx.png" alt="" />
+              <p>关注我</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="./images/wx.png" alt="" />
+              <p>关注我</p>
+            </div>
+          </li>
+          <div class="clearfix"></div>
+        </ul>
+      </div>
+    </div>
+    <!-- footer结束 -->
+  </body>
+</html>
